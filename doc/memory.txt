@@ -1,0 +1,59 @@
+Для регулирования потребления памяти клиентским RCP-приложением рекомендуется прописывать следующие параметры виртуальной машины:
+-Xms128m
+-Xmx256m
+-Dsun.rmi.dgc.client.gcInterval=3600000
+-Dsun.rmi.dgc.server.gcInterval=3600000
+-XX:+UseConcMarkSweepGC
+-XX:+CMSClassUnloadingEnabled 
+-XX:MaxPermSize=256m
+-Xverify:none
+
+Указываются эти параметры в файле .product вашего runner-проекта, на вкладке "Launching" в поле "VM Arguments". После создания скомпилированного приложения эти параметры могут быть отредактированы в файле .ini, который лежит рядом с запускаемым файлом программы.
+
+Описание параметров:
+
+-Xms -Xmx
+
+Определяют минимальный (стартовый) и максимальный размер кучи соответственно. Значения этих параметров задаются чтобы сделать фиксированным размер кучи.
+
+-Dsun.rmi.dgc.client.gcInterval
+-Dsun.rmi.dgc.server.gcInterval
+
+Данные настройки должны устанавливаться для приложений, которые используют удаленный вызов процедур (RMI, Remote Method Invocation). 
+Параметр "server" применяется для приложений, выполняющих роль RMI-серверов (сервер JNDI, контейнер EJB, а также JMS-сервер и сервер, обеспечивающий работу веб-сервисов). 
+Параметр "client" используется для программ, выполняющих роль RMI-клиента, осуществляющего запросы к RMI-серверу. Сюда относятся любые приложения, которые обращаются к удаленному серверу. 
+Вообще, данная настройка задает однозначный интервал срабатывания полной сборки мусора "один раз в час" вместо показателя по умолчанию "один раз в минуту". 
+Рекомендуется устанавливать данные значения в максимально возможные.
+В свою очередь, вы можете заблокировать полную сборку мусора полностью, указав следующую опцию:
+-XX:+DisableExplicitGC
+
+-XX:+UseConcMarkSweepGC или -XX:+UseParNewGC
+
+Используйте эти параметры, если у вас есть проблемы со слишком частыми зависаниями программы во время работы сборщика мусора. 
+Данная настройка принуждает JVM использовать другие алгоритмы для основных событий сборки мусора (а также для второстепенных сборок, если вы работаете на многопроцессорной машине). Эти параметры не станут "останавливать мир" ради полной очистки памяти :) 
+Следует также добавить параметры
+
+-XX:+CMSClassUnloadingEnabled и -XX:+CMSPermGenSweepingEnabled
+
+чтобы активировать выгрузку классов (по умолчанию эта опция отключена). 
+
+-XX:MaxPermSize
+
+Размер памяти, используемой для долгоживущих объектов.
+
+-Xverify:none
+
+Отключение проверки загружаемых jar-файлов.
+
+
+
+More exotic switches
+
+Listed below are some additional JVM switches which have either anecdotally or measurably impacted NetBeans performance on some, not all, systems. Your mileage may vary, but they may be worth a try. 
+
+-J-XX:+UseConcMarkSweepGC or -J-XX:+UseParNewGC - try these switches if you are having problems with intrusive garbage collection pauses. This switch causes the JVM to use different algorithms for major garbage collection events (also for minor collections, if run on a multiprocessor workstation), ones which do not "stop the world" for the entire garbage collection process. You should also add the line -J-XX:+CMSClassUnloadingEnabled and -J-XX:+CMSPermGenSweepingEnabled to your netbeans.conf file so that class unloading is enabled (it isn't by default when using this collector). 
+-XX:+UseAdaptiveSizePolicy - this switch may help improve garbage collector throughput and memory footprint. It is part of garbage collector ergonomics implemented in JDK5.0. 
+-J-XX:+UseParallelGC - some tests have shown that, at least on systems fairly well equipped with memory, the durations of minor garbage collections is halved when using this collection algorithm, on uniprocessor systems. Note that this is paradoxical - this collector is designed to work best on multiprocessor systems with gigabyte heaps. No data is available on its effect on major garbage collections. Note: this collector is mutually exclusive with -J-XX:+UseConcMarkSweepGC. . The measurements supporting the use of this algorithm can be found on the performance website. 
+-J-XX:+PrintGCDetails - this is similar switches (like -J-verbose:gc) do not improve performance but provide diagnostic data showing information about memory management that are useful source of input for performance tuning. Another way how to obtain these data is to use monitoring tools or (NetBeans) profiler. 
+-J-XX:CompileThreshold=100 - this switch will make startup time slower, by HotSpot to compile many more methods down to native code sooner than it otherwise would. The reported result is snappier performance once the IDE is running, since more of the UI code will be compiled rather than interpreted. This value represents the number of times a method must be called before it will be compiled. 
+-J-Djava.net.preferIPv4Stack=true - this switch will suppress use of IPv6 stack in networking code and it can avoid small delay during startup when inet address is being resolved. It will be usefull only on a system where IPv6 is installed but not actually configured. Note: there can be another problems related to IPv6 - see for example discussion on interaction between fwbuilder and Java apps

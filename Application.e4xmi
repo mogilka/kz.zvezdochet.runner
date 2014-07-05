@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_pH56wNG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ide.application" accessibilityPhrase="">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_pH6h0NG-EeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.window.main" label="Астрологический процессор Звездочёт" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/stargazer16.png" width="1024" height="768">
+    <tags>shellMaximized</tags>
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_vSzgUNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspectivestack.main">
+      <children xsi:type="advanced:Perspective" xmi:id="_49xJwNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspective.main" label="Событие" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/date_obj.gif">
+        <children xsi:type="basic:PartStack" xmi:id="_1HZiYNV-EeKybMJ398u_gw" elementId="kz.zvezdochet.runner.partstack.main"/>
+      </children>
+    </children>
+    <mainMenu xmi:id="_KEDrYNHCEeKuMKJU9yHiPA" elementId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_bnv3sNHaEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.menu.settings" label="Параметры" iconURI="">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_ajYwUNHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.settings" label="Настройка" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/configure.gif" command="_bkL3QNHjEeKuMKJU9yHiPA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_e5lUgNHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.help" label="Справка" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/help.gif" command="_mA9YINHjEeKuMKJU9yHiPA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnmxANHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.about" label="О проекте" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/message_info.gif" command="_D-1MANHiEeKuMKJU9yHiPA"/>
+      </children>
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_b1Z8YNHeEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.exit" label="Выход" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
+    </mainMenu>
+    <trimBars xmi:id="_9YkXwNHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.trimbar.main"/>
+  </children>
+  <handlers xmi:id="_q1DOsNHiEeKuMKJU9yHiPA" elementId="" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.handlers.ExitHandler" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
+  <handlers xmi:id="_5Sg90NHiEeKuMKJU9yHiPA" elementId="" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.handlers.AboutHandler" command="_D-1MANHiEeKuMKJU9yHiPA"/>
+  <handlers xmi:id="_eeY-kNHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handler.settings" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.handlers.SettingsHandler" command="_bkL3QNHjEeKuMKJU9yHiPA"/>
+  <handlers xmi:id="_n0cvANHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handler.help" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.handlers.HelpHandler" command="_mA9YINHjEeKuMKJU9yHiPA"/>
+  <commands xmi:id="_Vf1E8NHfEeKuMKJU9yHiPA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_D-1MANHiEeKuMKJU9yHiPA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_bkL3QNHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.command.settings" commandName="settingsCommand"/>
+  <commands xmi:id="_mA9YINHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.command.help" commandName="helpCommand"/>
+  <addons xmi:id="_pH6h0dG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_pH6h0tG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_pH6h09G-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_pH6h1NG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_pH6h1dG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_pH6h1tG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
