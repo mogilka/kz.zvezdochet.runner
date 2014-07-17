@@ -17,44 +17,4 @@ public class ExitHandler {
 			workbench.close();
 		}
 	}
-
-	// Default to true if not implemented
-//	@CanExecute
-//		public boolean canExecute() {
-//		// TODO add some logic here
-//		return true;
-//	}
-	
-	/*
-	 *   @Execute
-public void execute(final Shell shell, EModelService service, 
-  MWindow window) {
-  IWindowCloseHandler handler = new IWindowCloseHandler() {
-    @Override
-    public boolean close(MWindow window) {
-      return MessageDialog.openConfirm(shell, 
-      "Close", 
-      "You will loose data. Really close?");
-    }
-  };
-window.getContext().set(IWindowCloseHandler.class, handler);
-} 
-
-
-@Execute
-public void execute(MHandledItem item) {
-  MCommand command = item.getCommand();
-  // Prints out the commmand ID
-  System.out.println(command.getElementId());
-} 
-
-
-@Execute
-public void execute(IEclipseContext context) {
-// put an example value in the context
-  context.set("myactivePartId", 
-  "com.example.e4.rcp.ui.parts.todooverview");
-} 
-
-	 */
 }
