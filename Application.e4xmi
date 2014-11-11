@@ -15,7 +15,12 @@
       </children>
       <children xsi:type="menu:HandledMenuItem" xmi:id="_b1Z8YNHeEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.exit" label="Выход" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
     </mainMenu>
-    <trimBars xmi:id="_9YkXwNHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.trimbar.main"/>
+    <trimBars xmi:id="_9YkXwNHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.trimbar.main">
+      <children xsi:type="menu:ToolControl" xmi:id="_GeeSUBs5EeSmDKwadHMMRA" elementId="kz.zvezdochet.runner.toolcontrol.perspective" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.ui.PerspectiveBar"/>
+    </trimBars>
+    <trimBars xmi:id="_K033AA6lEeSg-JkqPuRrkA" elementId="kz.zvezdochet.runner.trimbar.status" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_QOx68A6lEeSg-JkqPuRrkA" elementId="kz.zvezdochet.runner.toolcontrol.status" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.ui.StatusToolControl"/>
+    </trimBars>
   </children>
   <handlers xmi:id="_q1DOsNHiEeKuMKJU9yHiPA" elementId="" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.handlers.ExitHandler" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
   <handlers xmi:id="_5Sg90NHiEeKuMKJU9yHiPA" elementId="" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.handlers.AboutHandler" command="_D-1MANHiEeKuMKJU9yHiPA"/>

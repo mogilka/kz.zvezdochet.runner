@@ -13,8 +13,7 @@ public class ExitHandler {
 	public void execute(IWorkbench workbench,
 			@Named(IServiceConstants.ACTIVE_SHELL) Shell shell) {
 		if (MessageDialog.openConfirm(shell, "Подтверждение",
-				"Вы действительно хотите выйти?")) {
+				"Вы действительно хотите выйти?"))
 			workbench.close();
-		}
 	}
 }
