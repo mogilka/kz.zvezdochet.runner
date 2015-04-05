@@ -10,6 +10,6 @@ import org.eclipse.swt.widgets.Shell;
 public class AboutHandler {
 	@Execute
 	public void execute(@Named(IServiceConstants.ACTIVE_SHELL) Shell shell) {
-		MessageDialog.openInformation(shell, "О проекте", "Астрологический процессор Звездочёт zvezdochet.kz");
+		MessageDialog.openInformation(shell, "О проекте", "Астрологический процессор Звездочёт zvezdochet.guru");
 	}
 }
