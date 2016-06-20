@@ -3,7 +3,7 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_pH6h0NG-EeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.window.main" label="Астрологический процессор Звездочёт" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/stargazer16.png" width="1024" height="768">
     <tags>shellMaximized</tags>
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_vSzgUNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspectivestack.main">
-      <children xsi:type="advanced:Perspective" xmi:id="_49xJwNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspective.main" label="Событие" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/date_obj.gif">
+      <children xsi:type="advanced:Perspective" xmi:id="_49xJwNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspective.main" label="События" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/date_obj.gif">
         <children xsi:type="basic:PartStack" xmi:id="_1HZiYNV-EeKybMJ398u_gw" elementId="kz.zvezdochet.runner.partstack.main"/>
       </children>
     </children>
@@ -15,9 +15,7 @@
       </children>
       <children xsi:type="menu:HandledMenuItem" xmi:id="_b1Z8YNHeEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.exit" label="Выход" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
     </mainMenu>
-    <trimBars xmi:id="_9YkXwNHjEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.trimbar.main">
-      <children xsi:type="menu:ToolControl" xmi:id="_GeeSUBs5EeSmDKwadHMMRA" elementId="kz.zvezdochet.runner.toolcontrol.perspective" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.ui.PerspectiveBar"/>
-    </trimBars>
+    <trimBars xmi:id="_9YkXwNHjEeKuMKJU9yHiPA" elementId="org.eclipse.ui.main.toolbar"/>
     <trimBars xmi:id="_K033AA6lEeSg-JkqPuRrkA" elementId="kz.zvezdochet.runner.trimbar.status" side="Bottom">
       <children xsi:type="menu:ToolControl" xmi:id="_QOx68A6lEeSg-JkqPuRrkA" elementId="kz.zvezdochet.runner.toolcontrol.status" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.ui.StatusToolControl"/>
     </trimBars>
