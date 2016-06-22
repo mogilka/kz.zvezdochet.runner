@@ -9,13 +9,12 @@
     </children>
     <mainMenu xmi:id="_KEDrYNHCEeKuMKJU9yHiPA" elementId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_bnv3sNHaEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.menu.settings" label="Параметры" iconURI="">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_ajYwUNHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.settings" label="Настройка" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/configure.gif" command="_bkL3QNHjEeKuMKJU9yHiPA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_e5lUgNHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.help" label="Справка" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/help.gif" command="_mA9YINHjEeKuMKJU9yHiPA"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnmxANHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.about" label="О проекте" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/message_info.gif" command="_D-1MANHiEeKuMKJU9yHiPA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_ajYwUNHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.settings" label="Настройка" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/configure.gif" tooltip="Настройка" command="_bkL3QNHjEeKuMKJU9yHiPA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_e5lUgNHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.help" label="Справка" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/help.gif" tooltip="Справка" command="_mA9YINHjEeKuMKJU9yHiPA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_vnmxANHdEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.about" label="О проекте" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/message_info.gif" tooltip="О проекте" command="_D-1MANHiEeKuMKJU9yHiPA"/>
       </children>
-      <children xsi:type="menu:HandledMenuItem" xmi:id="_b1Z8YNHeEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.exit" label="Выход" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
+      <children xsi:type="menu:HandledMenuItem" xmi:id="_b1Z8YNHeEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.handledmenuitem.exit" label="Выход" tooltip="Выход" command="_Vf1E8NHfEeKuMKJU9yHiPA"/>
     </mainMenu>
-    <trimBars xmi:id="_9YkXwNHjEeKuMKJU9yHiPA" elementId="org.eclipse.ui.main.toolbar"/>
     <trimBars xmi:id="_K033AA6lEeSg-JkqPuRrkA" elementId="kz.zvezdochet.runner.trimbar.status" side="Bottom">
       <children xsi:type="menu:ToolControl" xmi:id="_QOx68A6lEeSg-JkqPuRrkA" elementId="kz.zvezdochet.runner.toolcontrol.status" contributionURI="bundleclass://kz.zvezdochet.runner/kz.zvezdochet.runner.ui.StatusToolControl"/>
     </trimBars>
