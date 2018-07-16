@@ -8,28 +8,33 @@
       <product
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
             description="Астрологический процессор Звездочёт"
-            name="kz.zvezdochet.runner">
+            name="Звездочёт">
          <property
                name="clearPersistedState"
                value="true">
          </property>
          <property
-               name="applicationCSS"
-               value="platform:/plugin/kz.zvezdochet.runner/css/default.css">
-         </property>
-         <property
                name="appName"
-               value="kz.zvezdochet.runner">
+               value="Звездочёт">
          </property>
          <property
                name="aboutImage"
-               value="icons/about.png">
+               value="icons/message_info.gif">
          </property>
          <property
                name="windowImages"
                value="icons/stargazer16.png,icons/stargazer32.png">
          </property>
       </product>
+   </extension>
+   <extension
+         id="id1"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+      </application>
    </extension>
 
 </plugin>
