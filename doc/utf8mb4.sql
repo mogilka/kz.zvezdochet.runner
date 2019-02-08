@@ -1,0 +1,1 @@
+ALTER SCHEMA `stargazer`  DEFAULT CHARACTER SET utf8mb4 ;
