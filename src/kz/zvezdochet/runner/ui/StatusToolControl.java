@@ -4,7 +4,7 @@ import javax.annotation.PostConstruct;
 
 /**
  * Строка состояния приложения
- * @author Nataly Didenko
+ * @author Natalie Didenko
  * @todo Use IEventBroker to publish&listen for global events and update the label.
  * {@link http://www.vogella.com/tutorials/EclipseJobs/article.html}
  */
