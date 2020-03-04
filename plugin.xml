@@ -36,5 +36,19 @@
             visible="true">
       </application>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="kz.zvezdochet.runner.WorkbenchPreferencePage"
+            id="kz.zvezdochet.runner.page"
+            name="Настройки">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="kz.zvezdochet.runner.AbstractPreferenceInitializer">
+      </initializer>
+   </extension>
 
 </plugin>
