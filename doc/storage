@@ -1,2 +1,2 @@
-mv -f /var/www/zvezdochet.guru/cache/* /media/nataly/toshiba/cache
-chmod 777 /media/nataly/toshiba/cache
+mv -f /var/www/zvezdochet.guru/cache/* /media/natalie/toshiba/cache
+chmod 777 /media/natalie/toshiba/cache
