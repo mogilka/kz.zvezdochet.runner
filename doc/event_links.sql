@@ -1,5 +1,5 @@
 -- поиск связанных записей персоны
-set @p1 = 1;
+set @p1 = 2000;
 select
 (select count(id) from blobs where eventid = @p1) as eblob,
 (select count(id) from eventconfs where eventid = @p1) as econf,
@@ -8,3 +8,5 @@ select
 (select count(id) from synastry where partnerid = @p1) as esynp,
 (select count(id) from transit where eventid = @p1) as etrans,
 (select count(id) from transit where personid = @p1) as etransp;
+
+-- select * from synastry where eventid = @p1 or partnerid = @p1
