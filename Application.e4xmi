@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_pH56wNG-EeKuMKJU9yHiPA" elementId="org.eclipse.e4.ide.application" accessibilityPhrase="">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_pH6h0NG-EeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.window.main" label="Астрологический процессор Звездочёт" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/stargazer16.png" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_pH6h0NG-EeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.window.main" label="Stargazer" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/stargazer16.png" width="1024" height="768">
     <tags>shellMaximized</tags>
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_vSzgUNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspectivestack.main">
       <children xsi:type="advanced:Perspective" xmi:id="_49xJwNHKEeKuMKJU9yHiPA" elementId="kz.zvezdochet.runner.perspective.main" label="События" iconURI="platform:/plugin/kz.zvezdochet.runner/icons/date_obj.gif">

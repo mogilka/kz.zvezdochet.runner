@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Звездочёт" uid="zvezdochet" id="kz.zvezdochet.runner.product" application="org.eclipse.equinox.p2.publisher.ProductPublisher" version="3.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+<product name="Stargazer" uid="zvezdochet" id="kz.zvezdochet.runner.product" application="org.eclipse.equinox.p2.publisher.ProductPublisher" version="3.0.0.qualifier" useFeatures="false" includeLaunchers="true">
 
    <aboutInfo>
       <image path="/kz.zvezdochet.runner/icons/message_info.gif"/>
@@ -28,11 +28,9 @@
       </win>
    </launcher>
 
-
    <vm>
       <linux include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7</linux>
    </vm>
-
 
    <plugins>
       <plugin id="biz.aQute.bndlib"/>

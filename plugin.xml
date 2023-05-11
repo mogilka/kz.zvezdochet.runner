@@ -8,7 +8,7 @@
       <product
             application="org.eclipse.e4.ui.workbench.swt.E4Application"
             description="Астрологический процессор Звездочёт"
-            name="Звездочёт">
+            name="Stargazer">
          <property
                name="clearPersistedState"
                value="true">
